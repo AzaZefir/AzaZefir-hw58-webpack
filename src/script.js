@@ -7,3 +7,5 @@ import './styles/styles.css';
 // import './js/symbol';
 // import './js/string';
 // import './js/function';
+// import './js/objects';
+import './js/classes';
