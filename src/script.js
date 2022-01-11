@@ -8,4 +8,8 @@ import './styles/styles.css';
 // import './js/string';
 // import './js/function';
 // import './js/objects';
-import './js/classes';
+// import './js/classes';
+// import './js/map';
+import './js/set'
+
+

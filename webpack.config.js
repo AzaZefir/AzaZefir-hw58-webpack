@@ -7,6 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const { sources } = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -15,6 +16,7 @@ const isDev = process.env.NODE_ENV === 'development'
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
+    // devtool: 'source-map',
     performance: {
         hints: false,
         maxEntrypointSize: 512000,
@@ -32,6 +34,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
+        clean:true
     },
     resolve: {
         extensions: ['.js', '.json', '.png']
@@ -48,7 +51,7 @@ module.exports = {
                 collapseWhitespace: true
             }
         }),
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [{
                 from: path.resolve(__dirname, './src/img/favicon.ico'),

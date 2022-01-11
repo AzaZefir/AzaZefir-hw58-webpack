@@ -29,7 +29,7 @@ class Bird extends Animal{
     }
 
     getName() {
-        console.log('log from big bird');
+        console.log('hello from bird');
         console.log(super.getName());
     }
 }
